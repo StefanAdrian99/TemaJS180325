@@ -1,0 +1,7 @@
+#colorContainer{
+    width: 300px;
+    height: 300px;
+    margin: auto;
+    background-color: #AD636C;
+    transition: background-color 1s ease-in-out;
+}
