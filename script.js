@@ -10,26 +10,16 @@ const colors = ["#AD636C", "#009B72", "#6761AB", "#347E8D", "#798186"];
 let counter = 0;
 
 
-nextColorSwitch.onclick = function(){
+nextColorSwitch.onclick = function () {
+    if (counter >= 4) return; 
+
     counter++;
     nextColorSwitch.textContent = "Next";
-    if(counter === 1){
-        colorContainer.style.backgroundColor = colors[counter];
-        clickedCounter.textContent = `Clicked ${counter} times`;
-    }
-    else if(counter === 2){
-        colorContainer.style.backgroundColor = colors[counter];
-        clickedCounter.textContent = `Clicked ${counter} times`;
-    }
-    else if(counter === 3){
-        colorContainer.style.backgroundColor = colors[counter];
-        clickedCounter.textContent = `Clicked ${counter} times`;
-    }
-    else if(counter === 4){
-        colorContainer.style.backgroundColor = colors[counter];
-        clickedCounter.textContent = `Clicked ${counter} times`;
-    }
-}
+    
+    colorContainer.style.backgroundColor = colors[counter];
+    clickedCounter.textContent = `Clicked ${counter} times`;
+};
+
 
 resetSwitch.onclick = function(){
     counter = 0;
